@@ -1,0 +1,1471 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ||||||||||||||||||||||||| @font-face: Roboto Condesed ||||||||||||||||||||||||||||*/
+    /* roboto-condensed-300 - latin */
+    @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: 300;
+        src: local(''),
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    
+    /* roboto-condensed-300italic - latin */
+    @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: italic;
+        font-weight: 300;
+        src: local(''),
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-300italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-300italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    
+    /* roboto-condensed-regular - latin */
+    @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: 400;
+        src: local(''),
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    
+    /* roboto-condensed-700 - latin */
+    @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: 700;
+        src: local(''),
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    
+    /* roboto-condensed-italic - latin */
+    @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: italic;
+        font-weight: 400;
+        src: local(''),
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    
+    /* roboto-condensed-700italic - latin */
+    @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: italic;
+        font-weight: 700;
+        src: local(''),
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+  
+/*||||||||||||||||||||||||||| @font-face: Permanent Marker |||||||||||||||||||||||||||||*/
+    /* permanent-marker-regular - latin */
+    @font-face {
+        font-family: 'Permanent Marker';
+        font-style: normal;
+        font-weight: 400;
+        src: local(''),
+            url('fonts/Permanent_Marker/permanent-marker-v10-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/Permanent_Marker/permanent-marker-v10-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+  
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxx Mobil xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+@media screen and (max-width: 1180px) {
+
+    html {
+        font: 1rem 'Roboto Condensed', sans-serif;
+    }
+
+    #all {
+        max-width: 1920px;
+        margin:0 auto;
+    }
+
+
+
+        /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Navigation >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+        input[id*="checker"] {
+            display: none;
+        }
+
+        #logo_top_sticky {
+            display: none;
+        }
+
+        #logo_top {
+            max-width: 230px;
+            flex-basis: 20%;
+            padding: 20px;
+        }
+
+        #topnav {
+            background: black;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            bottom: 0;
+            width: 250px;
+            z-index: 100;
+            transition: 0.4s;
+            overflow-y: auto;
+        }
+
+        #navchecker:checked ~ #topnav {
+            left: 0;
+        }	
+
+        #topnav p {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background: #680707;
+            text-align: center;
+            line-height: 40px;
+            font-size: 2.5rem;
+            border-radius: 0 0 0 15px;
+            color: white;
+            padding-top: 10px;     
+        }
+
+        #top_menu ul{
+            list-style: none;
+        }
+
+        #topnav a {
+            text-decoration: none;
+            padding: 0 1rem;
+            line-height: 2.5rem;
+            display: block;
+            white-space: nowrap;
+            border-bottom: solid 1px rgba(255, 255, 255, 0.274);
+            background: black;
+            color: white;
+        }
+
+        #topnav ul ul a { 
+            background: #680707;
+        }
+        
+        #topnav ul ul a:before { 
+            content: "►";
+            padding-right: 5px;
+        }
+            
+        /* --------------------- Burger-Button -------------------------- */	
+        
+        #topnav label:before {
+            content: "\2261";
+        }
+    
+        #navchecker:checked ~ #topnav label:before {
+            content: "\00d7";
+        }
+        
+        
+        /* ------------ Navi-Background ------------ */
+        
+        #close_nav label {
+            display: block;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.596);
+            z-index: 99;
+            opacity: 0;
+            transition: 0.5s;
+            visibility: hidden;
+        }
+                    
+        #navchecker:checked ~ #close_nav label {
+            opacity: 1;
+            visibility: visible;
+        }
+
+       
+        /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+        footer {
+            background: #680707;
+            min-height: 300px;
+            max-width: 100%;
+            color: white;
+            display: flex;
+            justify-content:space-between;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 5%;
+        }
+
+        img[src*="logo_white."] {
+            max-width: 150px;
+            padding: 5% 5% 5% 5%;
+            margin-right: 45vw;
+            min-width: 150px;
+            
+        }
+
+        img[src*="facebook-logo."] {
+            width: 20px;   
+        }
+
+        img[src*="instagram-logo."] {
+            width: 20px;
+        }
+
+        #social-media {
+            padding: 4.5vw;
+            padding-top: 5%;
+            margin-right: 250px;
+        }
+
+        #impr {
+            padding-top: 5%;
+            padding: 4.5vw;
+            margin-right: 500px;
+        }
+
+        #impr a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #h_zeiten {
+            padding: 10px 50px 5px 4.5vw;
+        }
+
+
+        #social-media img {
+            display: inline-block;
+            margin: 5px;
+        }
+
+
+
+    /* ---------------------------------------------------------------------------
+        <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Cookies >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        ------------------------------------------------------------------------------*/
+
+        #cookies a {color:#000;}
+
+        #cookies a:hover {text-decoration: underline;}
+
+
+        #cookies { 
+        outline: 2px solid #7b92a9; 
+        text-align: center; 
+        border-top: 1px solid #fff;
+        background: linear-gradient(#dddddddd ,#eeeeeedd); 
+        position: fixed;
+        bottom: 0; 
+        left: 12.5vw;
+        right: 12.5vw;
+        z-index: 10000; 
+        width: 75vw; 
+        font-size: 1rem; 
+        line-height: 1.8rem;
+        padding: 1.2rem; 
+        }
+
+        #cookies span {
+            display: block;
+        }
+
+        .cookiesCloser {
+        color: rgb(0, 0, 0);
+        font: 14px/100% arial, sans-serif;
+        text-decoration: none;
+        text-shadow: 0 1px 0 #fff;
+        cursor: pointer;
+        border: 1px solid white; 
+        border-color:white #7b92a9 white #7b92a9;
+        padding: 4px 10px;
+        margin-left: 10px;
+        background: #ddd;
+        background: linear-gradient(#eee,#ddd); 
+        }
+
+        .cookiesCloser:hover {border-bottom: 1px solid white; border-right: 1px solid white; border-top: 1px solid #7b92a9; border-left: 1px solid #7b92a9;}
+    
+    /*######################################################################################
+    ####################################### Kontakt ###########################################
+    #######################################################################################*/
+    
+    
+        /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Landing-Page >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+    
+        main {
+            display: block;
+            background-color: black;
+            background-image: url("../img/bg_ueber_uns1.jpg");
+            background-size: cover;
+            background-repeat: repeat-y;
+            min-height: 1700px;
+        } 
+    
+        .landingpage {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    
+        #kontakt-seite {
+            color: white;
+            background: rgba(0, 0, 0, 0.596);
+            min-height: 1500px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    
+        #kontakt {
+            padding: 2%;
+            margin-bottom: 100px;
+        }
+    
+        #kontakt h1 {
+            font: 2rem 'Permanent Marker';
+            padding: 80px 3.5vw 80px 3.5vw;
+            text-align: center;
+        }
+    
+        #kontakt strong {
+            font-size: 1.3rem;
+        }
+    
+    
+        #kontakt > p {
+            padding: 0px 50px 50px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    
+        #kontakt ul {
+            list-style: none;
+            margin-left: calc(50% - 100px);
+            font-size: 1.2rem;
+            padding-bottom: 50px;
+        }
+    
+        address, address a {
+            color: white;
+            font-style: normal;
+        }
+        
+    
+        #bg_r_top {
+            
+            background: rgba(0, 0, 0, 0.596);
+            padding: 50px 30px;   
+            text-align: center;
+        }
+        
+        #bg_r_top h3 {
+            font: 2rem 'Permanent Marker';
+            padding: 10px 0px;
+            color: white;
+            text-align: center;
+        }
+    
+        #bg_r_top p {
+            font-size: 1.3rem;
+            color: white;
+            padding: 5% 2%;
+        }
+    
+        img[src*="besitzer."] {
+            max-width: 100%; 
+            left: 0;
+            right: 0;
+        }
+          /*........................... Kontakt-Formular ............................*/
+    
+        
+         #formular {
+             padding: 30px 60px;
+             font: 1rem 'Roboto Condensed';
+         }
+    
+         form input {
+             width: 60vw;
+             padding: 5px;
+             margin: 5px 0;
+         }
+    
+         select {
+             margin-bottom: 10px;
+             padding: 5px;
+         }
+    
+        #betreff {
+            min-width: 50vw;
+            max-width: 60vw;
+         }
+    
+         form textarea {
+            font: 1rem 'Roboto Condensed';
+            min-width: 60vw;
+            height: 250px;
+            margin: 10px 0;
+            padding: 5px;
+            margin-bottom: 30px;
+         }
+    
+         #kontakt_bottom input {
+            width: auto;
+        }
+    
+        input[type="radio"] {
+            margin: 20px 0;
+        }
+    
+        input[type="submit"] {
+            margin-left: calc(50% - 25px);
+            margin-top: 40px;
+            padding: 10px 15px;
+        }
+    
+        p > a {
+            color: white;
+        }
+    
+                /*................................... Karriere ........................................*/
+        
+   
+    
+                #karriere {
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+            
+                #bg_r_bottom {
+                    min-height: 500px;
+                    background: rgba(0, 0, 0, 0.596);
+                    padding: 50px 30px;   
+                    text-align: center;
+                }
+                
+                #bg_r_bottom h3 {
+                    font: 2rem 'Permanent Marker';
+                    padding: 10px 0px;
+                    color: white;
+                    text-align: center;
+                }
+            
+                #bg_r_bottom p:first-of-type {
+                    font-size: 1.3rem;
+                    color: white;
+                    padding: 20px 10px;
+                }
+    
+                #bg_r_bottom p:last-of-type {
+                    font-size: 1.3rem;
+                    color: white;
+                    padding: 20px 10px;
+                    margin-bottom: 10px; 
+                }
+            
+                img[src*="karriere."] {
+                    max-width: 100%;
+                }
+    }
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxx Desktop xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+@media screen and (min-width: 1180.5px) {
+
+html {
+    font: 1rem 'Roboto Condensed', sans-serif;
+}
+
+#all {
+    max-width: 1920px;
+    margin:0 auto;
+}
+
+
+
+    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Navigation >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+    input[id*="checker"] {
+        display: none;
+    }
+
+    nav {
+        background: black;
+        display: flex;
+        justify-content:space-between;
+        padding: 20px;
+    }
+
+    #logo_top {
+        max-width: 230px;
+        flex-basis: 20%;
+        padding: 10px;
+    }
+
+    #logo_top_sticky {
+        display: none;
+    }
+
+    #top_menu {
+        color: white;
+        list-style: none;
+        display: flex;
+        flex-basis: 40%;
+        align-items:center;
+        justify-content: space-between;    
+    }
+
+    #top_menu li {
+        flex-basis: 30%;
+        font-size: 1.5rem;
+        text-align: center;
+        position: relative;
+    }
+
+    #top_menu li a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        white-space: nowrap;
+    }
+
+    #top_menu li a.akt {
+        font-weight:900;
+        text-decoration:underline;
+    }
+
+    #top_menu > li:hover {
+        text-decoration: underline;
+    }
+
+    #topnav ul ul {
+        list-style: none;
+        position: absolute;
+        background: #680707;
+        min-width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+        z-index: 1;
+        margin-top: 10px;
+        border-radius: 15px;
+        
+       }
+
+    #topnav ul ul li {
+        line-height: 40px;
+        height: 50px; 
+        font-size: 1.2rem;
+        padding: 4px 10px 0;      
+          
+    }
+
+    #topnav > ul li:hover ul {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #topnav ul ul li:hover {
+        font-weight:900;
+    }
+
+    #topnav ul ul li a {
+        color: white; 
+        padding-bottom: 5px;
+        
+    }
+      /* -------------------- Anpassung für Sticky-Menu -----------------------*/
+
+    #topnav.sticky {
+		position: fixed;
+		top: 0;
+		z-index: 100;
+        padding-top: 5px;
+        right: 0;
+        left: 0;
+        height: 80px;
+        transition: 2s; 
+        max-width: 1920px;
+        margin: auto;
+	}
+	
+	#topnav.sticky ul {
+		max-width: 920px;
+		right: 0;
+        z-index: 100;
+        margin-top: 10px;
+	}
+
+    #topnav.sticky #logo_top_sticky {
+        width: 50px;
+        height: 50px;
+        flex-basis: 15%;
+        top: 15px;
+        position: absolute;
+        display: block;
+        left: 10px;
+    }
+   
+    #topnav.sticky #logo_top {
+        display: none;
+    }
+
+
+    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+    footer {
+        background: #680707;
+        min-height: 200px;
+        max-width: 1920px;
+        color: white;
+        display: grid;
+        grid-template-columns: 17% 17% 17% 14% 14%;
+        grid-template-rows: 20% 50%;
+        grid-template-areas: "logo_white social-media impr h_zeit h_zeit"
+                            "logo_white social-media impr h_zeit h_zeit";
+        align-content: space-evenly;
+        justify-content:space-between;
+        
+    }
+
+    img[src*="logo_white."] {
+        width: 200px;
+        grid-area: logo_white;
+        padding: 30px 30px 0;
+    }
+
+    img[src*="facebook-logo."] {
+        width: 20px;
+    }
+
+    img[src*="instagram-logo."] {
+        width: 20px;
+    }
+
+    #social-media {
+        grid-area: social-media;
+        padding-top: 35px;
+    }
+
+    #impr {
+        grid-area: impr;
+        padding-top: 30px;
+    }
+
+    #impr a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #h_zeiten {
+        grid-area: h_zeit;
+    }
+
+
+    #social-media img {
+        display: inline-block;
+        margin: 5px;
+    }
+
+
+
+/* ---------------------------------------------------------------------------
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Cookies >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    ------------------------------------------------------------------------------*/
+
+    #cookies a {color:white;}
+
+    #cookies a:hover {text-decoration: underline;}
+
+
+    #cookies { 
+        text-align: center; 
+        background: #680707;
+        position: fixed;
+        bottom: 0; 
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10000; 
+        width: 50vw; 
+        font-size: 1rem; 
+        line-height: 1.8rem;
+        padding: 1.2rem; 
+        color: white;
+    }
+
+    
+    .cookiesCloser {
+        color: white;
+        font: 14px/100% arial, sans-serif;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 4px 10px;
+        margin-left: 10px;
+        background: black; /* Old browsers */
+        background: black; 
+    }
+
+    .cookiesCloser:hover {border-bottom: 1px solid white; border-right: 1px solid white; border-top: 1px solid #7b92a9; border-left: 1px solid #7b92a9;}
+
+
+/*######################################################################################
+####################################### Kontakt ###########################################
+#######################################################################################*/
+
+
+    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Landing-Page >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+    main {
+        display: block;
+        background-color: black;
+        background-image: url("../img/bg_ueber_uns1.jpg");
+        background-size: cover;
+        background-repeat: repeat-y;
+        min-height: 1700px;
+    } 
+
+    .landingpage {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    #kontakt-seite {
+        color: white;
+        background: rgba(0, 0, 0, 0.596);
+        height: 1625px;
+        margin-top: 100px;
+        max-width: 750px;
+        display: flex;
+        flex-direction: column;
+        animation-name: ani-kontakt;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1 infinite;
+        animation-direction: normal;
+        animation-timing-function: ease;
+    }
+
+    #kontakt {
+        padding: 5%;
+        margin-bottom: 100px;
+    }
+
+    #kontakt h1 {
+        font: 2rem 'Permanent Marker';
+        padding: 100px 60px 80px 60px;
+        text-align: center;
+    }
+
+    #kontakt strong {
+        font-size: 1.3rem;
+    }
+
+
+    #kontakt > p {
+        padding: 0px 50px 50px;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    #kontakt ul {
+        list-style: none;
+        margin-left: calc(50% - 100px);
+        font-size: 1.2rem;
+        padding-bottom: 50px;
+    }
+
+    address, address a {
+        color: white;
+        font-style: normal;
+    }
+
+    @keyframes ani-kontakt {
+        from {transform: translateX(-1000px) translateY(0px);}
+        to {transform: translateX(0px) translateY(0px);}
+    }
+
+    #besitzer {
+        display: flex;
+        flex-direction: column;
+        animation-name: ani-besitzer;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1 infinite;
+        animation-direction: normal;
+        animation-timing-function: ease;
+    }
+    
+    @keyframes ani-besitzer {
+        from {transform: translateX(3000px) translateY(0px);}
+        to {transform: translateX(0px) translateY(-50px);}
+    }
+
+    #bg_r_top {
+        min-height: 450px;
+        width: 750px;
+        background: rgba(0, 0, 0, 0.596);
+        padding: 60px 60px;   
+        margin-top: -195px;
+        position: relative;
+        margin-right: 25px;
+        text-align: center;
+    }
+    
+    #bg_r_top h3 {
+        font: 2rem 'Permanent Marker';
+        padding: 180px 0px;
+        color: white;
+        left: calc(50% - 300px);
+        
+        text-align: center;
+    }
+
+    #bg_r_top p {
+        font-size: 1.3rem;
+        color: white;
+        width: 600px;
+        position: absolute;
+        left: calc(50% - 300px);
+        top: 290px;
+        padding: 50px 40px;
+    }
+
+    img[src*="besitzer."] {
+        max-width: 500px;
+        margin-top: 20%;
+        margin-left: 120px;
+        z-index: 1;  
+    }
+
+      /*........................... Kontakt-Formular ............................*/
+
+    
+     #formular {
+         padding: 30px 60px;
+         font: 1rem 'Roboto Condensed';
+     }
+
+     form input {
+         width: 250px;
+         padding: 5px;
+         margin: 5px 0;
+     }
+
+     select {
+         margin-bottom: 10px;
+         padding: 5px;
+     }
+
+    #betreff {
+         width: 550px;
+     }
+
+     form textarea {
+        font: 1rem 'Roboto Condensed';
+        width: 550px;
+        height: 250px;
+        margin: 10px 0;
+        padding: 5px;
+        margin-bottom: 30px;
+     }
+
+     #kontakt_bottom input {
+        width: auto;
+    }
+
+    input[type="radio"] {
+        margin: 20px 0;
+    }
+
+    input[type="submit"] {
+        margin-left: calc(50% - 56.9px);
+        margin-top: 40px;
+        padding: 15px 30px;
+        font-size: 1rem;
+        border-radius: 10px;
+        background: #680707;
+        color: white;
+    }
+
+    input[type="submit"]:hover {
+        background: #AD974F;
+    }
+
+    p > a {
+        color: white;
+    }
+
+            /*...........................................................................*/
+    
+            #flex-wrap {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+
+
+            #karriere {
+                display: flex;
+                flex-direction: column;
+                animation-name: ani-karriere;
+                animation-duration: 1s;
+                animation-delay: 0s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: 1 infinite;
+                animation-direction: normal;
+                animation-timing-function: ease;
+            }
+            
+            @keyframes ani-karriere {
+                from {transform: translateX(3000px) translateY(0px);}
+                to {transform: translateX(0px) translateY(-50px);}
+            }
+        
+            #bg_r_bottom {
+                min-height: 700px;
+                width: 750px;
+                background: rgba(0, 0, 0, 0.596);
+                padding: 60px 60px;   
+                margin-top: -195px;
+                position: relative;
+                margin-right: 25px;
+                text-align: center;
+            }
+            
+            #bg_r_bottom h3 {
+                font: 2rem 'Permanent Marker';
+                padding: 180px 0px;
+                color: white;
+                left: calc(50% - 300px);
+                
+                text-align: center;
+            }
+        
+            #bg_r_bottom p:first-of-type {
+                font-size: 1.3rem;
+                color: white;
+                width: 600px;
+                position: absolute;
+                left: calc(50% - 300px);
+                top: 290px;
+                padding: 50px 40px;
+                margin-bottom: 10px;
+            }
+
+            #bg_r_bottom p:last-of-type {
+                font-size: 1.3rem;
+                color: white;
+                width: 600px;
+                position: absolute;
+                left: calc(50% - 300px);
+                top: 490px;
+                padding: 50px 40px;
+                margin-bottom: 10px; 
+            }
+        
+            img[src*="karriere."] {
+                max-width: 500px;
+                margin-top: 10%;
+                margin-left: 120px;
+                z-index: 1;  
+            }
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX IE 11 - Anpassungen XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+    img[src*=".svg"] { width: 100%; }
+    html {
+        font: 1rem 'Roboto Condensed', sans-serif;
+    }
+
+    #all {
+        max-width: 1920px;
+        margin:0 auto;
+    }
+
+
+
+        /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Navigation >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+        input[id*="checker"] {
+            display: none;
+        }
+
+        nav {
+            background: black;
+            display: flex;
+            justify-content:space-between;
+            padding: 20px;
+        }
+
+        #logo_top {
+            max-width: 230px;
+            flex-basis: 20%;
+            padding: 10px;
+        }
+
+        #logo_top_sticky {
+            display: none;
+        }
+
+        #top_menu {
+            color: white;
+            list-style: none;
+            display: flex;
+            flex-basis: 40%;
+            align-items:center;
+            justify-content: space-between;    
+        }
+
+        #top_menu li {
+            flex-basis: 30%;
+            font-size: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        #top_menu li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            white-space: nowrap;
+        }
+
+        #top_menu li a.akt {
+            font-weight:900;
+            text-decoration:underline;
+        }
+
+        #top_menu > li:hover {
+            text-decoration: underline;
+        }
+
+        #topnav ul ul {
+            list-style: none;
+            position: absolute;
+            background: #680707;
+            min-width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s;
+            z-index: 1;
+            margin-top: 10px;
+            border-radius: 15px;
+            
+        }
+
+        #topnav ul ul li {
+            line-height: 40px;
+            height: 50px; 
+            font-size: 1.2rem;
+            padding: 4px 10px 0;      
+            
+        }
+
+        #topnav > ul li:hover ul {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #topnav ul ul li:hover {
+            font-weight:900;
+        }
+
+        #topnav ul ul li a {
+            color: white; 
+            padding-bottom: 5px;
+            
+        }
+
+        /* -------------------- Anpassung für Sticky-Menu -----------------------*/
+
+        #topnav.sticky {
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            padding-top: 5px;
+            right: 0;
+            left: 0;
+            height: 80px;
+            transition: 2s; 
+            max-width: 1920px;
+            margin: auto;
+        }
+        
+        #topnav.sticky ul {
+            max-width: 920px;
+            right: 0;
+            z-index: 100;
+            margin-top: 10px;
+        }
+
+        #topnav.sticky #logo_top_sticky {
+            width: 50px;
+            height: 50px;
+            flex-basis: 15%;
+            top: 15px;
+            position: absolute;
+            display: block;
+            left: 10px;
+        }
+    
+        #topnav.sticky #logo_top {
+            display: none;
+        }
+
+
+        /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+        footer {
+            background: #680707;
+            min-height: 200px;
+            max-width: 1920px;
+            color: white;
+            display: grid;
+            grid-template-columns: 17% 17% 17% 14% 14%;
+            grid-template-rows: 20% 50%;
+            grid-template-areas: "logo_white social-media impr h_zeit h_zeit"
+                                "logo_white social-media impr h_zeit h_zeit";
+            align-content: space-evenly;
+            justify-content:space-between;
+            
+        }
+
+        img[src*="logo_white."] {
+            width: 200px;
+            grid-area: logo_white;
+            padding: 30px 30px 0;
+        }
+
+        img[src*="facebook-logo."] {
+            width: 20px;
+        }
+
+        img[src*="instagram-logo."] {
+            width: 20px;
+        }
+
+        #social-media {
+            grid-area: social-media;
+            padding: 30px;
+        }
+
+        #impr {
+            grid-area: impr;
+            padding: 30px;
+        }
+
+        #impr a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #h_zeiten {
+            grid-area: h_zeit;
+            padding: 30px;
+        }
+
+
+        #social-media img {
+            display: inline-block;
+            margin: 5px;
+        }
+
+
+    /* ---------------------------------------------------------------------------
+        <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Cookies >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        ------------------------------------------------------------------------------*/
+
+        #cookies a {color:white;}
+
+        #cookies a:hover {text-decoration: underline;}
+
+
+        #cookies { 
+            text-align: center; 
+            background: #680707;
+            position: fixed;
+            bottom: 0; 
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10000; 
+            width: 50vw; 
+            font-size: 1rem; 
+            line-height: 1.8rem;
+            padding: 1.2rem; 
+            color: white;
+        }
+
+        
+        .cookiesCloser {
+            color: white;
+            font: 14px/100% arial, sans-serif;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 4px 10px;
+            margin-left: 10px;
+            background: black; /* Old browsers */
+            background: black; 
+        }
+
+        .cookiesCloser:hover {border-bottom: 1px solid white; border-right: 1px solid white; border-top: 1px solid #7b92a9; border-left: 1px solid #7b92a9;}
+    
+    /*######################################################################################
+####################################### Kontakt ###########################################
+#######################################################################################*/
+
+
+    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Landing-Page >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+    main {
+        display: block;
+        background-image: url("../img/bg_ueber_uns1.jpg");
+        background-size: cover;
+        background-repeat: repeat-y;
+        min-height: 1700px;
+    } 
+
+    .landingpage {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    #kontakt-seite {
+        color: white;
+        background: rgba(0, 0, 0, 0.596);
+        height: 1625px;
+        margin-top: 50px;
+        width: 750px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #kontakt {
+        padding: 5%;
+        margin-bottom: 100px;
+        max-width: 750px;
+    }
+
+    #kontakt h1 {
+        font: 2rem 'Permanent Marker';
+        padding: 100px 60px 80px 60px;
+    }
+
+    #kontakt strong {
+        font-size: 1.3rem;
+    }
+
+
+    #kontakt > p {
+        padding: 0px 50px 50px;
+        font-size: 1.5rem;
+    }
+
+    #kontakt ul {
+        list-style: none;
+        margin-left: calc(50% - 100px);
+        font-size: 1.2rem;
+        padding-bottom: 50px;
+    }
+
+    address, address a {
+        color: white;
+        font-style: normal;
+    }
+
+
+    #besitzer {
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+    #bg_r_top {
+        min-height: 400px;
+        width: 750px;
+        background: rgba(0, 0, 0, 0.596);
+        padding: 60px 60px;   
+        margin-top: -195px;
+        position: relative;
+        margin-right: 25px;
+        text-align: center;
+    }
+    
+    #bg_r_top h3 {
+        font: 2rem 'Permanent Marker';
+        padding: 180px 0px;
+        color: white;
+        left: calc(50% - 300px);
+        
+        text-align: center;
+    }
+
+    #bg_r_top p {
+        font-size: 1.3rem;
+        color: white;
+        width: 600px;
+        position: absolute;
+        left: calc(50% - 300px);
+        top: 290px;
+        padding: 50px 40px 30px 40px;
+    }
+
+    img[src*="besitzer."] {
+        width: 500px;
+        margin-top: 50px;
+        margin-left: 120px;
+        z-index: 1;  
+    }
+
+      /*........................... Kontakt-Formular ............................*/
+
+    
+     #formular {
+         padding: 30px 60px;
+         font: 1rem 'Roboto Condensed';
+     }
+
+     form input {
+         width: 250px;
+         padding: 5px;
+         margin: 5px 0;
+     }
+
+     select {
+         margin-bottom: 10px;
+         padding: 5px;
+     }
+
+    #betreff {
+         width: 550px;
+     }
+
+     form textarea {
+        font: 1rem 'Roboto Condensed';
+        width: 550px;
+        height: 250px;
+        margin: 10px 0;
+        padding: 5px;
+        margin-bottom: 30px;
+     }
+
+     #kontakt_bottom input {
+        width: auto;
+    }
+
+    input[type="radio"] {
+        margin: 20px 0;
+    }
+
+    input[type="submit"] {
+        margin-left: calc(50% - 56.9px);
+        margin-top: 40px;
+        padding: 15px 30px;
+        font-size: 1rem;
+        border-radius: 10px;
+        background: #680707;
+        color: white;
+    }
+
+    input[type="submit"]:hover {
+        background: #AD974F;
+    }
+
+    p > a {
+        color: white;
+    }
+
+            /*...........................................................................*/
+    
+            #flex-wrap {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+
+
+            #karriere {
+                display: flex;
+                flex-direction: column;
+            }
+        
+            #bg_r_bottom {
+                min-height: 700px;
+                width: 750px;
+                background: rgba(0, 0, 0, 0.596);
+                padding: 60px 60px;   
+                margin-top: -195px;
+                position: relative;
+                margin-right: 25px;
+                text-align: center;
+            }
+            
+            #bg_r_bottom h3 {
+                font: 2rem 'Permanent Marker';
+                padding: 180px 0px;
+                color: white;
+                left: calc(50% - 300px);
+                
+                text-align: center;
+            }
+        
+            #bg_r_bottom p:first-of-type {
+                font-size: 1.3rem;
+                color: white;
+                width: 600px;
+                position: absolute;
+                left: calc(50% - 300px);
+                top: 290px;
+                padding: 50px 40px;
+                margin-bottom: 10px;
+            }
+
+            #bg_r_bottom p:last-of-type {
+                font-size: 1.3rem;
+                color: white;
+                width: 600px;
+                position: absolute;
+                left: calc(50% - 300px);
+                top: 490px;
+                padding: 50px 40px;
+                margin-bottom: 10px; 
+            }
+        
+            img[src*="karriere."] {
+                width: 500px;
+                margin-top: 10%;
+                margin-left: 120px;
+                z-index: 1;  
+            }
+}
+    

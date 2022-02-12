@@ -1,0 +1,1842 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ||||||||||||||||||||||||| @font-face: Roboto Condesed ||||||||||||||||||||||||||||*/
+    /* roboto-condensed-300 - latin */
+    @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: 300;
+        src: local(''),
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    
+    /* roboto-condensed-300italic - latin */
+    @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: italic;
+        font-weight: 300;
+        src: local(''),
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-300italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-300italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    
+    /* roboto-condensed-regular - latin */
+    @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: 400;
+        src: local(''),
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    
+    /* roboto-condensed-700 - latin */
+    @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: 700;
+        src: local(''),
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    
+    /* roboto-condensed-italic - latin */
+    @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: italic;
+        font-weight: 400;
+        src: local(''),
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    
+    /* roboto-condensed-700italic - latin */
+    @font-face {
+        font-family: 'Roboto Condensed';
+        font-style: italic;
+        font-weight: 700;
+        src: local(''),
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/Roboto_Condensed/roboto-condensed-v19-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+  
+/*||||||||||||||||||||||||||| @font-face: Permanent Marker |||||||||||||||||||||||||||||*/
+    /* permanent-marker-regular - latin */
+    @font-face {
+        font-family: 'Permanent Marker';
+        font-style: normal;
+        font-weight: 400;
+        src: local(''),
+            url('fonts/Permanent_Marker/permanent-marker-v10-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/Permanent_Marker/permanent-marker-v10-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+  
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+    
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxx Mobil xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+@media screen and (max-width: 1180px) {
+
+
+    html {
+        font: 1rem 'Roboto Condensed', sans-serif;
+    }
+
+    #all {
+        max-width: 1920px;
+        margin:0 auto;
+    }
+
+
+
+        /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Navigation >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+        input[id*="checker"] {
+            display: none;
+        }
+
+        #logo_top_sticky {
+            display: none;
+        }
+
+        #logo_top {
+            max-width: 230px;
+            flex-basis: 20%;
+            padding: 20px;
+        }
+
+        #topnav {
+            background: black;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            bottom: 0;
+            width: 250px;
+            z-index: 100;
+            transition: 0.4s;
+            overflow-y: auto;
+        }
+
+        #navchecker:checked ~ #topnav {
+            left: 0;
+        }	
+
+        #topnav p {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background: #680707;
+            text-align: center;
+            line-height: 40px;
+            font-size: 2.5rem;
+            border-radius: 0 0 0 15px;
+            color: white;
+            padding-top: 10px;     
+        }
+
+        #top_menu ul{
+            list-style: none;
+        }
+
+        #topnav a {
+            text-decoration: none;
+            padding: 0 1rem;
+            line-height: 2.5rem;
+            display: block;
+            white-space: nowrap;
+            border-bottom: solid 1px rgba(255, 255, 255, 0.274);
+            background: black;
+            color: white;
+        }
+
+        #topnav ul ul a { 
+            background: #680707;
+        }
+        
+        #topnav ul ul a:before { 
+            content: "►";
+            padding-right: 5px;
+        }
+            
+        /* --------------------- Burger-Button -------------------------- */	
+        
+        #topnav label:before {
+            content: "\2261";
+        }
+    
+        #navchecker:checked ~ #topnav label:before {
+            content: "\00d7";
+        }
+        
+        
+        /* ------------ Navi-Background ------------ */
+        
+        #close_nav label {
+            display: block;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.596);
+            z-index: 99;
+            opacity: 0;
+            transition: 0.5s;
+            visibility: hidden;
+        }
+                    
+        #navchecker:checked ~ #close_nav label {
+            opacity: 1;
+            visibility: visible;
+        }
+
+       
+        /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+        footer {
+            background: #680707;
+            min-height: 300px;
+            max-width: 100%;
+            color: white;
+            display: flex;
+            justify-content:space-between;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 5%;
+        }
+
+        img[src*="logo_white."] {
+            max-width: 150px;
+            padding: 5% 5% 5% 5%;
+            margin-right: 45vw;
+            min-width: 150px;
+            
+        }
+
+        img[src*="facebook-logo."] {
+            width: 20px;   
+        }
+
+        img[src*="instagram-logo."] {
+            width: 20px;
+        }
+
+        #social-media {
+            padding: 4.5vw;
+            padding-top: 5%;
+            margin-right: 250px;
+        }
+
+        #impr {
+            padding-top: 5%;
+            padding: 4.5vw;
+            margin-right: 500px;
+        }
+
+        #impr a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #h_zeiten {
+            padding: 10px 50px 5px 4.5vw;
+        }
+
+
+        #social-media img {
+            display: inline-block;
+            margin: 5px;
+        }
+
+
+
+    /* ---------------------------------------------------------------------------
+        <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Cookies >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        ------------------------------------------------------------------------------*/
+
+        #cookies a {color:#000;}
+
+        #cookies a:hover {text-decoration: underline;}
+
+
+        #cookies { 
+        outline: 2px solid #7b92a9; 
+        text-align: center; 
+        border-top: 1px solid #fff;
+        background: linear-gradient(#dddddddd ,#eeeeeedd); 
+        position: fixed;
+        bottom: 0; 
+        left: 12.5vw;
+        right: 12.5vw;
+        z-index: 10000; 
+        width: 75vw; 
+        font-size: 1rem; 
+        line-height: 1.8rem;
+        padding: 1.2rem; 
+        }
+
+        #cookies span {
+            display: block;
+        }
+
+        .cookiesCloser {
+        color: rgb(0, 0, 0);
+        font: 14px/100% arial, sans-serif;
+        text-decoration: none;
+        text-shadow: 0 1px 0 #fff;
+        cursor: pointer;
+        border: 1px solid white; 
+        border-color:white #7b92a9 white #7b92a9;
+        padding: 4px 10px;
+        margin-left: 10px;
+        background: #ddd; /* Old browsers */
+        background: linear-gradient(#eee,#ddd); 
+        }
+
+        .cookiesCloser:hover {border-bottom: 1px solid white; border-right: 1px solid white; border-top: 1px solid #7b92a9; border-left: 1px solid #7b92a9;}
+
+
+    /*######################################################################################
+    ####################################### Home ###########################################
+    #######################################################################################*/
+
+
+        /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Landing-Page >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+        main {
+            display: block;
+        } 
+
+        .landingpage {
+            background: black;
+            height: 100vh;
+            position: relative;
+        }
+
+        .landingpage #landing_burger {
+            bottom: 0;
+            position: absolute;
+        }
+
+        #logo_top_burger {
+            max-width: 230px;
+            flex-basis: 20%;
+            padding: 20px;
+        }
+
+        h1 {
+            display: none;
+        }
+
+        #slogan {
+            position: absolute;
+            top: 150px;
+            margin-left: 10%;
+            padding: 0 10px;
+            z-index: 1;
+        }
+
+        #slogan #begr1 {
+            font: 4.0rem 'Permanent Marker';
+            color: white;
+            text-align: center;
+        }
+
+        #slogan #begr2 {
+            font: 2.0rem 'Permanent Marker';
+            color: white;
+            text-align: center;   
+        }
+
+        #res-button {
+            background: #680707;
+            position: absolute;
+            margin-left: 25%;
+            bottom: 25vh;
+            border-radius: 1em;
+            z-index: 1;
+            margin-top: 20%;
+        }
+
+        #res-button p {
+            font-size: 1rem;
+            padding: 20px 40px;    
+        }
+
+        #res-button a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        #res-button a:hover, #res-button:hover {
+            background: #AD974F;
+            border-radius: 1em;
+        }
+
+        /* ---------------------------------------------------------------------------
+        <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Über uns >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        ------------------------------------------------------------------------------*/
+
+        #home-content {
+            background-color: black;
+            background-image: url("../img/bg_ueber_uns1.jpg");
+            background-size: cover;
+            min-height: 3000px;
+            background-repeat: repeat-y;
+        }
+
+        #flex-phil {        
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            
+        }
+
+        #phil_u2 {
+            color: white;
+            font-size: 2rem;
+            position: relative;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.596);
+            padding: 40px;
+            text-align: center;
+        }
+
+    
+
+            /* ssssssssssssssssssssssssssssss Regionalität ssssssssssssssssssssssssssssssss*/
+
+            #regional {
+                display: flex;   
+                flex-direction: column;        
+            } 
+                    
+            #bg_l_top {
+                padding: 60px 50px;   
+                order: 2;
+                width: auto;
+                background: rgba(0, 0, 0, 0.596);
+            }
+            
+            #bg_l_top h3 {
+                font: 1.5rem 'Permanent Marker';
+                color: white;
+                margin: 0% 5% 0%;
+                padding: 0% 5% 0% 5%;
+            }
+
+            #bg_l_top p {
+                font-size: 1rem;
+                line-height:1.5rem;
+                color: white;
+                margin: 50px 5% 0;
+                padding: 1vh 5% 1vh 5%;
+            }
+
+           img[src*="kuh."] {
+                max-width: 100%;
+                min-height: auto;
+                order: 1;
+                
+
+            }
+
+            /*ssssssssssssssssssssssssssssssssssss Handmade sssssssssssssssssssssssssssssss*/
+
+            #handmade {
+               display: flex;
+               flex-direction: column;
+            }
+
+            #bg_r_top {
+                padding: 60px 50px;   
+                width: auto;
+                background: rgba(0, 0, 0, 0.596); 
+            }
+            
+            #bg_r_top h3 {
+                font: 1.5rem 'Permanent Marker';
+                color: white;
+                margin: 0% 5% 0%;
+                padding: 0% 5% 0% 5%;
+            }
+
+            #bg_r_top p {
+                font-size: 1rem;
+                line-height:1.5rem;
+                color: white;
+                margin: 50px 5% 0;
+                padding: 1vh 5% 1vh 5%;
+            }
+
+            img[src*="handmade."] {
+                max-width: 100%;
+                min-height: auto;
+            } 
+        
+
+            /*sssssssssssssssssssssssssssssssssssss Restaurant sssssssssssssssssssssssssssssss*/
+
+            #raeume_u2 {
+                color: white;
+                font-size: 2rem;
+                left: 0px;
+                right: 0px;
+                background: rgba(0, 0, 0, 0.596);
+                padding: 40px;
+                text-align: center;
+                max-width: 1920px;
+                position: relative;
+                width: 100%;               
+            }
+
+                /*----------------------------------- Slider ------------------------------------------*/
+
+                /* News */
+
+                .news-slider {
+                    margin: auto;
+                    max-width: 1200px;
+                }
+                .news-slider .text-content {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: rgba(0, 0, 0, 0.774);
+                    padding: 2em;
+                    width: 38%;
+                    height: 100%;
+                    display: none;
+                }
+                .news-slider .text-content h3 {
+                    margin: 0;
+                    font-family: 'Permanent Marker';
+                    font-size: 2.6vw;
+                    padding: 4% 0 4%;
+                    color: white;
+                }
+                .news-slider .text-content p {
+                    margin: 1em 0;
+                    font-size: 2.3vw;
+                    color: white;
+                }
+                .news-slider .text-content a.button-link {
+                    padding: 0.25em 0.5em;
+                    position: absolute;
+                    bottom: 1em;
+                    right: 1em;
+                }
+                .news-slider .image-content {
+                    line-height: 0;
+                }
+                .news-slider .image-content img {
+                    max-width: 100%;
+                }
+                .news-slider .news-pager {
+                    text-align: right;
+                    display: block;
+                    margin: 0.2em 0 0;
+                    padding: 0;
+                    list-style: none;
+                    display: none;
+                }
+                .news-slider .news-pager li {
+                    display: inline-block;
+                    padding: 0.6em;
+                    margin: 0 0 0 1em;
+                }
+
+                .news-slider .news-pager li.sy-active {
+                    display: none;
+                }
+
+                .news-slider .news-pager li.sy-active a {
+                    color: #31ace2;
+                }
+                .news-slider .news-pager li a {
+                    font-weight: 500;
+                    text-decoration: none;
+                    display: block;
+                    color: #222;
+                }
+    
+
+
+            /*sssssssssssssssssssssssssssssssssssss Home - Page-bottom sssssssssssssssssssssssssssssss*/
+            
+            .home_endpage {
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+            }
+
+            img[src*="burger_bottom1."] {
+                margin-top: 50px;
+                max-width: 40%;
+                display: none;
+            }
+            
+            #content_home_bottom {
+                display: flex;
+                color: white;  
+                flex-direction: column;
+                align-content:space-between;
+                max-width: 100%; 
+                background:rgba(0, 0, 0, 0.418);
+                padding: 0 30px 80px 30px;
+            }
+
+            #content_home_bottom > div:first-of-type > p:first-of-type {
+                font-size: 2.5rem;
+                padding: 100px 50px 150px;
+                text-align: center;
+            }
+
+            #call-to-action {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+
+            #call-to-action > div {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 40%;
+                align-items: center;
+            }
+
+            #call-to-action > div > a {
+                text-decoration: none;
+                color: white;
+                max-width: 350px;
+                margin-bottom: 50px;
+            }
+
+            #call-to-action > div > p:first-of-type {
+                font-size: 1.5rem;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+
+            #call-to-action div > a > span {
+                font-size: 1.2rem;
+                background:#680707;
+                display: block;
+                width: 200px;
+                padding: 20px;
+                text-align: center;
+                border-radius: 1em;
+            }
+
+            #call-to-action div > a > span:hover {
+                background: #AD974F;
+            }
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxx Desktop xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+@media screen and (min-width: 1180.5px) {
+
+
+    html {
+        font: 1rem 'Roboto Condensed', sans-serif;
+    }
+
+    #all {
+        max-width: 1920px;
+        margin:0 auto;
+    }
+
+
+
+        /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Navigation >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+        input[id*="checker"] {
+            display: none;
+        }
+
+        nav {
+            background: black;
+            display: flex;
+            justify-content:space-between;
+            padding: 20px;
+        }
+
+        #logo_top {
+            max-width: 230px;
+            flex-basis: 20%;
+            padding: 10px;
+        }
+
+        #logo_top_sticky {
+            display: none;
+        }
+
+        #top_menu {
+            color: white;
+            list-style: none;
+            display: flex;
+            flex-basis: 40%;
+            align-items:center;
+            justify-content: space-between;    
+        }
+
+        #top_menu li {
+            flex-basis: 30%;
+            font-size: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        #top_menu li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            white-space: nowrap;
+        }
+
+        #top_menu li a.akt {
+            font-weight:900;
+            text-decoration:underline;
+        }
+
+        #top_menu > li:hover {
+            text-decoration: underline;
+        }
+
+        #topnav ul ul {
+            list-style: none;
+            position: absolute;
+            background: #680707;
+            min-width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s;
+            z-index: 1;
+            margin-top: 10px;
+            border-radius: 15px;
+            
+        }
+
+        #topnav ul ul li {
+            line-height: 40px;
+            height: 50px; 
+            font-size: 1.2rem;
+            padding: 4px 10px 0;      
+            
+        }
+
+        #topnav > ul li:hover ul {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #topnav ul ul li:hover {
+            font-weight:900;
+        }
+
+        #topnav ul ul li a {
+            color: white; 
+            padding-bottom: 5px;
+            
+        }
+
+        /* -------------------- Anpassung für Sticky-Menu -----------------------*/
+
+        #topnav.sticky {
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            padding-top: 5px;
+            right: 0;
+            left: 0;
+            height: 80px;
+            transition: 2s; 
+            max-width: 1920px;
+            margin: auto;
+        }
+        
+        #topnav.sticky ul {
+            max-width: 920px;
+            right: 0;
+            z-index: 100;
+            margin-top: 10px;
+        }
+
+        #topnav.sticky #logo_top_sticky {
+            width: 50px;
+            height: 50px;
+            flex-basis: 15%;
+            top: 15px;
+            position: absolute;
+            display: block;
+            left: 10px;
+        }
+    
+        #topnav.sticky #logo_top {
+            display: none;
+        }
+
+
+        /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+        footer {
+            background: #680707;
+            min-height: 200px;
+            max-width: 1920px;
+            color: white;
+            display: grid;
+            grid-template-columns: 17% 17% 17% 14% 14%;
+            grid-template-rows: 20% 50%;
+            grid-template-areas: "logo_white social-media impr h_zeit h_zeit"
+                                "logo_white social-media impr h_zeit h_zeit";
+            align-content: space-evenly;
+            justify-content:space-between;
+            
+        }
+
+        img[src*="logo_white."] {
+            width: 200px;
+            grid-area: logo_white;
+            padding: 30px 30px 0;
+        }
+
+        img[src*="facebook-logo."] {
+            width: 20px;
+        }
+
+        img[src*="instagram-logo."] {
+            width: 20px;
+        }
+
+        #social-media {
+            grid-area: social-media;
+            padding-top: 35px;
+        }
+
+        #impr {
+            grid-area: impr;
+            padding-top: 30px;
+        }
+
+        #impr a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #h_zeiten {
+            grid-area: h_zeit;
+        }
+
+
+        #social-media img {
+            display: inline-block;
+            margin: 5px;
+        }
+
+
+    /* ---------------------------------------------------------------------------
+        <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Cookies >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        ------------------------------------------------------------------------------*/
+
+        #cookies a {color:white;}
+
+    #cookies a:hover {text-decoration: underline;}
+
+
+    #cookies { 
+        text-align: center; 
+        background: #680707;
+        position: fixed;
+        bottom: 0; 
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10000; 
+        width: 50vw; 
+        font-size: 1rem; 
+        line-height: 1.8rem;
+        padding: 1.2rem; 
+        color: white;
+    }
+
+    
+    .cookiesCloser {
+        color: white;
+        font: 14px/100% arial, sans-serif;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 4px 10px;
+        margin-left: 10px;
+        background: black; /* Old browsers */
+        background: black; 
+    }
+
+    .cookiesCloser:hover {border-bottom: 1px solid white; border-right: 1px solid white; border-top: 1px solid #7b92a9; border-left: 1px solid #7b92a9;}
+
+
+    /*######################################################################################
+    ####################################### Home ###########################################
+    #######################################################################################*/
+
+
+        /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Landing-Page >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+        main {
+            display: block;
+        } 
+
+        .landingpage {
+            background: black;
+            height: 900px;
+            position: relative;
+        }
+
+        .landingpage img{
+            bottom: 0;
+            position: absolute;
+        }
+
+        #logo_top_burger {
+            display: none;
+        }
+
+        h1 {
+            display: none;
+            color: white;
+        }
+
+        #slogan {
+            position: absolute;
+            top: 35px;
+            margin-left: 8%;
+            padding-right: 50px;
+            z-index: 1;
+        }
+
+        #slogan #begr1 {
+            font: 7rem 'Permanent Marker';
+            color: white;
+            text-align: center;
+        }
+
+        #slogan #begr2 {
+            font: 4.5rem 'Permanent Marker';
+            color: white;
+            text-align: center;   
+        }
+
+        #res-button {
+            background: #680707;
+            position: absolute;
+            margin-left: 28%;
+            top: 500px;
+            border-radius: 1em;
+            z-index: 1;
+            margin-top: 20px;
+        }
+
+        #res-button p {
+            font-size: 1.75rem;
+            padding: 20px 40px;    
+        }
+
+        #res-button a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        #res-button a:hover, #res-button:hover {
+            background: #AD974F;
+            border-radius: 1em;
+        }
+
+        /* ---------------------------------------------------------------------------
+        <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Über uns >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        ------------------------------------------------------------------------------*/
+
+        #home-content {
+            background-image: url("../img/bg_ueber_uns1.jpg");
+            background-size: cover;
+            min-height: 3000px;
+            background-repeat: repeat-y;
+        }
+
+        #flex-phil {        
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            
+        }
+
+        #phil_u2 {
+            color: white;
+            font-size: 3rem;
+            position: relative;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.596);
+            padding: 40px;
+            text-align: center;
+        }
+
+    
+
+            /* ssssssssssssssssssssssssssssss Regionalität ssssssssssssssssssssssssssssssss*/
+
+
+            #regional {
+                display: flex;
+                flex-direction: column;
+                visibility: hidden;
+            }
+
+            .regional-fade-in {
+                animation-name: ani-kuh;
+                animation-duration: 1s;
+                animation-delay: 0s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: 1 infinite;
+                animation-direction: normal;
+                animation-timing-function: ease;     
+            }
+            
+            @keyframes ani-kuh {
+                from {transform: translateX(-200px) translateY(500px);}
+                to {transform: translateX(0px) translateY(-50px);}
+            }
+
+            #bg_l_top {
+                min-height: 550px;
+                width: 750px;
+                background: #0000008c;
+                padding: 60px 60px;   
+                margin-top: 150px;
+                position: relative;
+                margin-left: 25px;
+            }
+            
+            #bg_l_top h3 {
+                font: 1.5rem 'Permanent Marker';
+                padding-bottom: 10px;
+                color: white;
+                left: calc(50% - 300px);
+                position: absolute;
+            }
+
+            #bg_l_top p {
+                font-size: 1rem;
+                color: white;
+                width: 600px;
+                position: absolute;
+                left: calc(50% - 300px);
+                top: 110px;
+            }
+
+            img[src*="kuh."] {
+                max-width: 500px;
+                margin-top: -200px;   
+                margin-left: 150px;  
+                z-index: 1;   
+            }
+
+            /*ssssssssssssssssssssssssssssssssssss Handmade sssssssssssssssssssssssssssssss*/
+
+            #handmade {
+                display: flex;
+                flex-direction: column;
+                visibility: hidden;    
+            }
+
+            .handmade-fade-in {
+                animation-name: ani-handmade;
+                animation-duration: 0.5s;
+                animation-delay: 0s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: 1 infinite;
+                animation-direction: normal;
+                animation-timing-function: ease;
+            }
+            
+            @keyframes ani-handmade {
+                from {transform: translateX(200px) translateY(200px);}
+                to {transform: translateX(0px) translateY(-50px);}
+            }
+
+            #bg_r_top {
+                min-height: 550px;
+                width: 750px;
+                background: #0000008c;
+                padding: 60px 60px;   
+                margin-top: -195px;
+                position: relative;
+                margin-right: 25px;
+            }
+            
+            #bg_r_top h3 {
+                font: 1.5rem 'Permanent Marker';
+                padding-top: 180px;
+                color: white;
+                left: calc(50% - 300px);
+                position: absolute;
+            }
+
+            #bg_r_top p {
+                font-size: 1rem;
+                color: white;
+                width: 600px;
+                position: absolute;
+                left: calc(50% - 300px);
+                top: 290px;
+            }
+
+            img[src*="handmade."] {
+                max-width: 500px;
+                margin-top: 20%;
+                margin-left: 120px;
+                z-index: 1;  
+            }
+        
+
+            /*sssssssssssssssssssssssssssssssssssss Restaurant sssssssssssssssssssssssssssssss*/
+
+            #raeume_u2 {
+                color: white;
+                font-size: 3rem;
+                position: relative;
+                left: 0px;
+                right: 0px;
+                background: rgba(0, 0, 0, 0.596);
+                padding: 40px;
+                text-align: center;
+                max-width: 1920px;
+                margin: 50px 0;
+            }
+
+                /*----------------------------------- Slider ------------------------------------------*/
+
+                /* News */
+                .news-slider {
+                    margin: auto;
+                    max-width: 1200px;
+                }
+                .news-slider .text-content {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: rgba(0, 0, 0, 0.774);
+                    padding: 3em;
+                    width: 35%;
+                    height: 100%;
+                }
+                .news-slider .text-content h3 {
+                    margin: 0;
+                    font-family: 'Permanent Marker';
+                    font-size: 2rem;
+                    padding: 25% 0 50px;
+                    color: white;
+                }
+                .news-slider .text-content p {
+                    margin: 1em 0;
+                    font-size: 1.2rem;
+                    color: white;
+                }
+                .news-slider .text-content a.button-link {
+                    padding: 0.25em 0.5em;
+                    position: absolute;
+                    bottom: 1em;
+                    right: 1em;
+                }
+                .news-slider .image-content {
+                    line-height: 0;
+                }
+                .news-slider .image-content img {
+                    max-width: 100%;
+                }
+                .news-slider .news-pager {
+                    text-align: right;
+                    display: block;
+                    margin: 0.2em 0 0;
+                    padding: 0;
+                    list-style: none;
+                }
+                .news-slider .news-pager li {
+                    display: inline-block;
+                    padding: 0.6em;
+                    margin: 0 0 0 1em;
+                }
+
+                .news-slider .news-pager li.sy-active {
+                    display: none;
+                }
+
+                .news-slider .news-pager li.sy-active a {
+                    color: #31ace2;
+                }
+                .news-slider .news-pager li a {
+                    font-weight: 500;
+                    text-decoration: none;
+                    display: block;
+                    color: #222;
+                }
+    
+
+
+            /*sssssssssssssssssssssssssssssssssssss Home - Page-bottom sssssssssssssssssssssssssssssss*/
+            
+            .home_endpage {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+
+            img[src*="burger_bottom1."] {
+                margin-top: 130px;
+                padding-bottom: 50px;
+                max-width: 60%;
+            }
+            
+            #content_home_bottom {
+                display: flex;
+                color: white;
+                flex-direction: column;
+                align-content:space-between;
+                margin-top: 100px;
+                max-width: 800px; 
+                background:rgba(0, 0, 0, 0.418);
+                padding: 0 30px 80px 30px;
+                margin-bottom: 50px;
+            }
+
+            #content_home_bottom > div:first-of-type > p:first-of-type {
+                font-size: 2.5rem;
+                padding: 100px 50px 150px;
+                text-align: center;
+            }
+
+            #call-to-action {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+
+            #call-to-action > div {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 40%;
+                align-items: center;
+            }
+
+            #call-to-action > div > a {
+                text-decoration: none;
+                color: white;
+                max-width: 350px;
+                margin-bottom: 50px;
+            }
+
+            #call-to-action > div > p:first-of-type {
+                font-size: 1.5rem;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+
+            #call-to-action div > a > span {
+                font-size: 1.5rem;
+                background:#680707;
+                display: block;
+                width: 310px;
+                padding: 20px;
+                text-align: center;
+                border-radius: 1em;
+            }
+
+            #call-to-action div > a > span:hover {
+                background: #AD974F;
+            }
+}      
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX IE 11 - Anpassungen XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    img[src*=".svg"] { width: 100%; }
+    html {
+        font: 1rem 'Roboto Condensed', sans-serif;
+    }
+
+    #all {
+        max-width: 1920px;
+        margin:0 auto;
+    }
+
+
+
+        /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Navigation >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+        input[id*="checker"] {
+            display: none;
+        }
+
+        nav {
+            background: black;
+            display: flex;
+            justify-content:space-between;
+            padding: 20px;
+        }
+
+        #logo_top {
+            max-width: 230px;
+            flex-basis: 20%;
+            padding: 10px;
+        }
+
+        #logo_top_sticky {
+            display: none;
+        }
+
+        #top_menu {
+            color: white;
+            list-style: none;
+            display: flex;
+            flex-basis: 40%;
+            align-items:center;
+            justify-content: space-between;    
+        }
+
+        #top_menu li {
+            flex-basis: 30%;
+            font-size: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        #top_menu li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            white-space: nowrap;
+        }
+
+        #top_menu li a.akt {
+            font-weight:900;
+            text-decoration:underline;
+        }
+
+        #top_menu > li:hover {
+            text-decoration: underline;
+        }
+
+        #topnav ul ul {
+            list-style: none;
+            position: absolute;
+            background: #680707;
+            min-width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s;
+            z-index: 1;
+            margin-top: 10px;
+            border-radius: 15px;
+            
+        }
+
+        #topnav ul ul li {
+            line-height: 40px;
+            height: 50px; 
+            font-size: 1.2rem;
+            padding: 4px 10px 0;      
+            
+        }
+
+        #topnav > ul li:hover ul {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #topnav ul ul li:hover {
+            font-weight:900;
+        }
+
+        #topnav ul ul li a {
+            color: white; 
+            padding-bottom: 5px;
+            
+        }
+
+        /* -------------------- Anpassung für Sticky-Menu -----------------------*/
+
+        #topnav.sticky {
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            padding-top: 5px;
+            right: 0;
+            left: 0;
+            height: 80px;
+            transition: 2s; 
+            max-width: 1920px;
+            margin: auto;
+        }
+        
+        #topnav.sticky ul {
+            max-width: 920px;
+            right: 0;
+            z-index: 100;
+            margin-top: 10px;
+        }
+
+        #topnav.sticky #logo_top_sticky {
+            width: 50px;
+            height: 50px;
+            flex-basis: 15%;
+            top: 15px;
+            position: absolute;
+            display: block;
+            left: 10px;
+        }
+    
+        #topnav.sticky #logo_top {
+            display: none;
+        }
+
+
+        /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+        footer {
+            background: #680707;
+            min-height: 200px;
+            max-width: 1920px;
+            color: white;
+            display: grid;
+            grid-template-columns: 17% 17% 17% 14% 14%;
+            grid-template-rows: 20% 50%;
+            grid-template-areas: "logo_white social-media impr h_zeit h_zeit"
+                                "logo_white social-media impr h_zeit h_zeit";
+            align-content: space-evenly;
+            justify-content:space-between;
+            
+        }
+
+        img[src*="logo_white."] {
+            width: 200px;
+            grid-area: logo_white;
+            padding: 30px 30px 0;
+        }
+
+        img[src*="facebook-logo."] {
+            width: 20px;
+        }
+
+        img[src*="instagram-logo."] {
+            width: 20px;
+        }
+
+        #social-media {
+            grid-area: social-media;
+            padding: 30px;
+        }
+
+        #impr {
+            grid-area: impr;
+            padding: 30px;
+        }
+
+        #impr a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #h_zeiten {
+            grid-area: h_zeit;
+            padding: 30px;
+        }
+
+
+        #social-media img {
+            display: inline-block;
+            margin: 5px;
+        }
+
+
+    /* ---------------------------------------------------------------------------
+        <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Cookies >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        ------------------------------------------------------------------------------*/
+
+        #cookies a {color:white;}
+
+        #cookies a:hover {text-decoration: underline;}
+
+
+        #cookies { 
+            text-align: center; 
+            background: #680707;
+            position: fixed;
+            bottom: 0; 
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10000; 
+            width: 50vw; 
+            font-size: 1rem; 
+            line-height: 1.8rem;
+            padding: 1.2rem; 
+            color: white;
+        }
+
+        
+        .cookiesCloser {
+            color: white;
+            font: 14px/100% arial, sans-serif;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 4px 10px;
+            margin-left: 10px;
+            background: black; /* Old browsers */
+            background: black; 
+        }
+
+        .cookiesCloser:hover {border-bottom: 1px solid white; border-right: 1px solid white; border-top: 1px solid #7b92a9; border-left: 1px solid #7b92a9;}
+
+
+    /*######################################################################################
+    ####################################### Home ###########################################
+    #######################################################################################*/
+
+
+        /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Landing-Page >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+        main {
+            display: block;
+        } 
+
+        .landingpage {
+            background: rgb(0, 0, 0);
+            height: 900px;
+            position: relative;
+        }
+
+        .landingpage img{
+            bottom: 0;
+            position: absolute;
+        }
+
+        #logo_top_burger {
+            display: none;
+        }
+
+        h1 {
+            display: none;
+            color: white;
+        }
+
+        #slogan {
+            position: absolute;
+            top: 35px;
+            margin-left: 8%;
+            padding-right: 50px;
+            z-index: 1;
+        }
+
+        #slogan #begr1 {
+            font: 7rem 'Permanent Marker';
+            color: white;
+            text-align: center;
+        }
+
+        #slogan #begr2 {
+            font: 4.5rem 'Permanent Marker';
+            color: white;
+            text-align: center;   
+        }
+
+        #res-button {
+            background: #680707;
+            position: absolute;
+            margin-left: 28%;
+            top: 500px;
+            border-radius: 1em;
+            z-index: 1;
+            margin-top: 20px;
+        }
+
+        #res-button p {
+            font-size: 1.75rem;
+            padding: 20px 40px;    
+        }
+
+        #res-button a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        #res-button a:hover, #res-button:hover {
+            background: #AD974F;
+            border-radius: 1em;
+        }
+
+        /* ---------------------------------------------------------------------------
+        <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Über uns >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        ------------------------------------------------------------------------------*/
+
+        #home-content {
+            background-image: url("../img/bg_ueber_uns1.jpg");
+            background-size: cover;
+            min-height: 3000px;
+            background-repeat: repeat-y;
+        }
+
+        #flex-phil {        
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            
+        }
+
+        #phil_u2 {
+            color: white;
+            font-size: 3rem;
+            position: relative;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.596);
+            padding: 40px;
+            text-align: center;
+        }
+
+    
+
+            /* ssssssssssssssssssssssssssssss Regionalität ssssssssssssssssssssssssssssssss*/
+
+
+            #regional {
+                display: flex;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.596);
+                margin-top: 100px;            
+            }
+
+            #bg_l_top {
+                min-height: 550px;
+                width: 750px;
+                background: #0000008c;
+                padding: 60px 60px;   
+                margin-top: 50px;
+                position: relative;
+                margin-left: 25px;
+            }
+            
+            #bg_l_top h3 {
+                font: 1.5rem 'Permanent Marker';
+                padding-bottom: 10px;
+                color: white;
+                left: calc(50% - 300px);
+                position: absolute;
+            }
+
+            #bg_l_top p {
+                font-size: 1rem;
+                color: white;
+                width: 600px;
+                position: absolute;
+                left: calc(50% - 300px);
+                top: 110px;
+            }
+
+            img[src*="kuh."] {
+                width: 500px;
+                height: auto;
+                margin-bottom: 120px;   
+                margin-left: calc(50% - 250px);  
+            }
+
+            /*ssssssssssssssssssssssssssssssssssss Handmade sssssssssssssssssssssssssssssss*/
+
+            #handmade {
+                display: flex;
+                flex-direction: column;  
+                visibility: visible;
+                background: rgba(0, 0, 0, 0.596);
+                margin-top: 100px;
+            }
+
+            #bg_r_top {
+                min-height: 350px;
+                width: 750px;
+                background: #0000008c;
+                padding: 60px 60px;   
+                margin-top: 15px;
+                position: relative;
+                margin-right: 25px;
+            }
+            
+            #bg_r_top h3 {
+                font: 1.5rem 'Permanent Marker';
+                color: white;
+                left: calc(50% - 300px);
+                position: absolute;
+                top: -150px;
+            }
+
+            #bg_r_top p {
+                font-size: 1rem;
+                color: white;
+                width: 600px;
+                position: absolute;
+                left: calc(50% - 300px);
+                top: 90px;
+            }
+
+            img[src*="handmade."] {
+                max-width: 500px;
+                margin-top: 120px;
+                margin-right: calc(50% - 250px); 
+                z-index: 1;  
+            }
+        
+
+            /*sssssssssssssssssssssssssssssssssssss Restaurant sssssssssssssssssssssssssssssss*/
+
+            #raeume_u2 {
+                color: white;
+                font-size: 3rem;
+                position: relative;
+                left: 0px;
+                right: 0px;
+                background: rgba(0, 0, 0, 0.596);
+                padding: 40px;
+                text-align: center;
+                max-width: 1920px;
+                margin: 50px 0;
+            }
+
+                /*----------------------------------- Slider ------------------------------------------*/
+
+
+                .text-content {
+                    color: white;
+                }
+
+                .text-content h3 {
+                    font-family: 'Permanent Marker';
+                    font-size: 2rem;
+                    padding: 50px 20px 20px 20px;
+                    color: white;
+                    text-align: center;
+                }
+
+                .text-content p {
+                    padding: 50px;
+                    font-size: 1.5rem;
+                    color: white;
+                    text-align: center;
+                    max-width: 750px;
+                    margin-left: calc(50% - 375px);
+                }
+
+                .image-content {
+                    margin-left: calc(50% - 350px);
+                    width: 750px;
+                    border: 20px solid rgba(0, 0, 0, 0.596);
+                }
+
+
+                
+    
+
+
+            /*sssssssssssssssssssssssssssssssssssss Home - Page-bottom sssssssssssssssssssssssssssssss*/
+            
+            .home_endpage {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+
+            img[src*="burger_bottom1."] {
+                margin-top: 130px;
+                padding-bottom: 50px;
+                max-width: 60%;
+            }
+            
+            #content_home_bottom {
+                display: flex;
+                color: white;
+                flex-direction: column;
+                align-content:space-between;
+                margin-top: 100px;
+                max-width: 800px; 
+                background:rgba(0, 0, 0, 0.418);
+                padding: 0 30px 80px 30px;
+                margin-bottom: 50px;
+            }
+
+            #content_home_bottom > div:first-of-type > p:first-of-type {
+                font-size: 2.5rem;
+                padding: 100px 50px 150px;
+                text-align: center;
+            }
+
+            #call-to-action {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+
+            #call-to-action > div {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 40%;
+                align-items: center;
+            }
+
+            #call-to-action > div > a {
+                text-decoration: none;
+                color: white;
+                max-width: 350px;
+                margin-bottom: 50px;
+            }
+
+            #call-to-action > div > p:first-of-type {
+                font-size: 1.5rem;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+
+            #call-to-action div > a > span {
+                font-size: 1.5rem;
+                background:#680707;
+                display: block;
+                width: 310px;
+                padding: 20px;
+                text-align: center;
+                border-radius: 1em;
+            }
+
+            #call-to-action div > a > span:hover {
+                background: #AD974F;
+            }
+}  
+    
